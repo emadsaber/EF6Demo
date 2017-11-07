@@ -49,7 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Data\Context\SchoolDataContext.cs" />
     <Compile Include="Data\Contracts\IDataHandler.cs" />
     <Compile Include="Data\Handlers\StudentDataHandler.cs" />
