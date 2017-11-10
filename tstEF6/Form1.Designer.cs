@@ -42,7 +42,9 @@
             this.picPhoto = new System.Windows.Forms.PictureBox();
             this.btnBrowse = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dgvAllData = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.picPhoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAllData)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAdd
@@ -54,6 +56,7 @@
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtName
             // 
@@ -174,11 +177,20 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(189, 20);
             this.dateTimePicker1.TabIndex = 4;
             // 
+            // dgvAllData
+            // 
+            this.dgvAllData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAllData.Location = new System.Drawing.Point(15, 217);
+            this.dgvAllData.Name = "dgvAllData";
+            this.dgvAllData.Size = new System.Drawing.Size(607, 173);
+            this.dgvAllData.TabIndex = 5;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(418, 220);
+            this.ClientSize = new System.Drawing.Size(634, 401);
+            this.Controls.Add(this.dgvAllData);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.picPhoto);
             this.Controls.Add(this.label3);
@@ -195,7 +207,9 @@
             this.Controls.Add(this.btnAdd);
             this.Name = "Form1";
             this.Text = "Students Form";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picPhoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAllData)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,6 +231,7 @@
         private System.Windows.Forms.PictureBox picPhoto;
         private System.Windows.Forms.Button btnBrowse;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DataGridView dgvAllData;
     }
 }
 

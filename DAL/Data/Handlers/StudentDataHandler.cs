@@ -54,7 +54,7 @@ namespace DAL.Data.Handlers
 
         public List<Student> GetAll()
         {
-            throw new NotImplementedException();
+            return this._ctx.Students.ToList();
         }
 
         public bool Update(Student entity)
