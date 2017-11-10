@@ -40,13 +40,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business\Contracts\IStandardHandler.cs" />
+    <Compile Include="Business\Handlers\StandardsHandler.cs" />
     <Compile Include="Mappers\VMapper.cs" />
-    <Compile Include="Models\Contracts\IStudentHandler.cs" />
-    <Compile Include="Models\Entities\StandardDTO.cs" />
-    <Compile Include="Models\Entities\StudentDTO.cs" />
-    <Compile Include="Models\Handlers\StudentsHandler.cs" />
+    <Compile Include="Business\Contracts\IStudentHandler.cs" />
+    <Compile Include="Business\Models\StandardDTO.cs" />
+    <Compile Include="Business\Models\StudentDTO.cs" />
+    <Compile Include="Business\Handlers\StudentsHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{2cf3d894-7f6c-4aa2-b426-608c48b20f50}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ELogger\ELogger.csproj">
+      <Project>{c06723b5-2384-4422-8b30-cea557342d4c}</Project>
+      <Name>ELogger</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

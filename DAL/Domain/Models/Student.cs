@@ -15,6 +15,13 @@ namespace DAL.Domain.Models
         public byte[] Photo { get; set; }
         public decimal Height { get; set; }
         public float Weight { get; set; }
+
+        #region FKs
+        public int? StandardId { get; set; }
+        public int? TeacherId { get; set; }
+        #endregion
+
         public Standard Standard { get; set; }
+        public Teacher Teacher { get; set; }
     }
 }
