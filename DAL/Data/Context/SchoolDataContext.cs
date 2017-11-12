@@ -11,7 +11,7 @@ namespace DAL.Data.Context
 {
     public class SchoolDataContext:DbContext
     {
-        public SchoolDataContext() : base(DAL.Properties.Resources.connection)
+        public SchoolDataContext() : base("name=School.Dev")
         {
             Database.SetInitializer<SchoolDataContext>(new DropCreateDatabaseIfModelChanges<SchoolDataContext>());
         }

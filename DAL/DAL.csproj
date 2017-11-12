@@ -52,6 +52,7 @@
     <Compile Include="Data\Context\SchoolDataContext.cs" />
     <Compile Include="Data\Contracts\IDataHandler.cs" />
     <Compile Include="Data\Handlers\StudentDataHandler.cs" />
+    <Compile Include="Domain\Models\Entity.cs" />
     <Compile Include="Domain\Models\Standard.cs" />
     <Compile Include="Domain\Models\Student.cs" />
     <Compile Include="Domain\Models\Teacher.cs" />

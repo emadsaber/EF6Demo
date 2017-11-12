@@ -1,10 +1,6 @@
 ﻿using ELogger.Enums;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ELogger
 {
@@ -18,16 +14,16 @@ namespace ELogger
                 switch (level)
                 {
                     case LogLevel.Error:
-
+                        LogError(ex);
                         break;
                     case LogLevel.Info:
-
+                        LogInfo(ex);
                         break;
                     case LogLevel.Trace:
-
+                        LogTrace(ex);
                         break;
                     case LogLevel.Warning:
-
+                        LogWarning(ex);
                         break;
                 }
             }
@@ -40,12 +36,17 @@ namespace ELogger
         {
             try
             {
-                using (StreamWriter sw = new StreamWriter(Constants.LOG_PATH))
+                if (!File.Exists(Constants.LOG_PATH))
+                {
+                    Directory.CreateDirectory(Constants.LOG_DIR);
+                    File.CreateText(Constants.LOG_FILE);
+                }
+                using (StreamWriter sw = new StreamWriter(Constants.LOG_PATH,true))
                 {
                     sw.WriteLine($"[{DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss")}] [ERROR] : {ex.Message} \n {ex.StackTrace}");
                 }
             }
-            catch { }
+            catch (Exception e){ }
         }
         public static void LogTrace(Exception ex) { }
         public static void LogInfo(Exception ex) { }

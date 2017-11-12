@@ -59,14 +59,5 @@ namespace DAL.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Data Source=.\SQL2012; Initial Catalog=School.Dev; Integrated Security = false; User=sa; Password = 123456;Provider Name = System.Data.SqlClient.
-        /// </summary>
-        internal static string connection {
-            get {
-                return ResourceManager.GetString("connection", resourceCulture);
-            }
-        }
     }
 }
