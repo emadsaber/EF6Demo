@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Domain.Models
 {
-    public class Teacher
+    public class Teacher:Entity
     {
         public int Id { get; set; }
         public int Name { get; set; }

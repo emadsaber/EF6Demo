@@ -8,5 +8,6 @@ namespace DAL.Domain.Models
 {
     public class Manager: Employee
     {
+        public string Title { get; set; }
     }
 }

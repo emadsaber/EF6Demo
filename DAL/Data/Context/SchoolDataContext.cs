@@ -18,5 +18,7 @@ namespace DAL.Data.Context
 
         public DbSet<Student> Students { get; set; }
         public DbSet<Standard> Standards { get; set; }
+
+        public DbSet<Employee> Employees{ get; set; }
     }
 }

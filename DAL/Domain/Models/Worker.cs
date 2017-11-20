@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace DAL.Domain.Models
 {
-    class Worker
+    public class Worker:Employee
     {
+        public string Tasks { get; set; }
     }
 }

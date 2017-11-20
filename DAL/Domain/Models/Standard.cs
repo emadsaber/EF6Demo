@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Domain.Models
 {
-    public class Standard
+    public class Standard:Entity
     {
         public int StandardId { get; set; }
         public string StandardName { get; set; }
